@@ -1,18 +1,19 @@
-import { PageHeader, PageHeaderHeading } from "@/components/page-header";
-import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-export default function Dashboard() {
+const Dashboard: React.FC = () => {
     return (
-        <>
-            <PageHeader>
-                <PageHeaderHeading>Dashboard</PageHeaderHeading>
-            </PageHeader>
-            <Card>
-                <CardHeader>
-                    <CardTitle>React Shadcn Starter</CardTitle>
-                    <CardDescription>React + Vite + TypeScript template for building apps with shadcn/ui.</CardDescription>
-                </CardHeader>
-            </Card>
-        </>
-    )
-}
+        <div>
+            <nav>
+                <ul>
+                    <li><Link to="/question1">Question 1</Link></li>
+                    <li><Link to="/question2">Question 2</Link></li>
+                    <li><Link to="/question3">Question 3</Link></li>
+                    <li><Link to="/question4">Question 4</Link></li>
+                </ul>
+            </nav>
+        </div>
+    );
+};
+
+export default Dashboard;
