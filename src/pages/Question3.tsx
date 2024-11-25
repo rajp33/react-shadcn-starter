@@ -24,6 +24,13 @@ const Question3: React.FC = () => {
     });
     setTimeout(() => {
       setIsLoading(false);
+      toast({
+        title: 'Payment Successful',
+        className: 'bg-green-500 text-white',
+        description: 'Your payment has been processed successfully',
+        duration: 3000,
+      });
+      setOpen(false);
     }, 3000);
   };
 
